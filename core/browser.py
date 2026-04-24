@@ -48,6 +48,10 @@ class BrowserManager:
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
+        # 防止浏览器恢复上次会话页面（解决启动后不跳转的问题）
+        options.add_argument("--disable-session-crashed-bubble")
+        options.add_argument("--no-first-run")
+        options.add_argument("--no-default-browser-check")
         options.add_argument("--lang=zh-CN")
 
     def _create_chrome_driver(self):

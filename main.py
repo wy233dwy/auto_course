@@ -54,6 +54,10 @@ def main():
     searcher = AnswerSearcher()
 
     try:
+        # 等待浏览器完全启动后再跳转
+        import time
+        time.sleep(2)
+
         print(f"\n正在打开 {platform_name} 登录页面...")
         print("⚠️  请在浏览器中手动完成登录（扫码或输入密码）")
         print("⚠️  登录完成后，脚本会自动继续...")
